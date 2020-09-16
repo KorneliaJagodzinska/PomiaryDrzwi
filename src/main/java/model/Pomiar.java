@@ -20,6 +20,7 @@ public class Pomiar {
     @Enumerated(value = EnumType.STRING)
     private Monter monter;
     private String klient;
+    private String adresKlienta;
     @Enumerated(value = EnumType.STRING)
     private TypDrzwi typDrzwi;
     private int długość_drzwi;
