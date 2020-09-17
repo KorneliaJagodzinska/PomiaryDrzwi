@@ -33,8 +33,8 @@
             <div class="col-1">${pomiar.id}</div>
             <div class="col-2">${pomiar.monter}</div>
             <div class="col-1">${pomiar.klient}</div>
-            <div class="col-2">${pomiar.Adres_klienta}</div>
-            <div class="col-1">${pomiar.Typ_drzwi}</div>
+            <div class="col-2">${pomiar.adres_klienta}</div>
+            <div class="col-1">${pomiar.typDrzwi}</div>
             <div class="col-2">${pomiar.długość}</div>
             <div class="col-2">${pomiar.szerokość}</div>
             <div class="col-1">

@@ -17,7 +17,7 @@ public class PomiarFormServlet extends HttpServlet {
     private final EntityDao<Pomiar> entityDao = new EntityDao<Pomiar>();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("typ_drzwi", TypDrzwi.values());
+        req.setAttribute("typDrzwi", TypDrzwi.values());
 
         req.getRequestDispatcher("/pomiar_form.jsp").forward(req, resp);
     }
