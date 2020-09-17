@@ -17,9 +17,9 @@
 <jsp:include page="part_navigator.jsp"/>
 <div class="container">
     <h2>Pomiar</h2>
-    <form action="${pageContext.request.contextPath}/pomiar_form.jsp" method="post">
+    <form action="${pageContext.request.contextPath}/pomiar/form" method="post">
         <div class="row form-check">
-            <label class="col-4" for="monter">monter:</label>
+            <label class="col-4" for="monter">Monter:</label>
             <select class="col-8" id="monter" name="monter">
                 <c:forEach items="${requestScope.monter}" var="monter">
                     <option value="${monter}">${monter}</option>
@@ -28,22 +28,22 @@
         </div>
         <div class="row col-12 form-check">
             <input type="text" name="klient" id="klient">
-            <label class="form-check-label" for="klient">klient:</label>
+            <label class="form-check-label" for="klient">Klient:</label>
         </div>
         <div class="row col-12 form-check">
             <input type="text" name="adresKlienta" id="adresKlienta">
-            <label class="form-check-label" for="adresKlienta">adresKlienta:</label>
+            <label class="form-check-label" for="adresKlienta">Adres Klienta:</label>
         </div>
         <div class="row col-12 form-check">
-            <input type="number" step="1" name="długość_drzwi" id="długość_drzwi">
-            <label class="form-check-label" for="długość_drzwi">długość_drzwi:</label>
+            <input type="number" step="1" name="długośćDrzwi" id="długośćDrzwi">
+            <label class="form-check-label" for="długośćDrzwi">Długość drzwi:</label>
         </div>
         <div class="row col-12 form-check">
-            <input type="number" step="1" name="szerokość_drzwi" id="szerokość_drzwi">
-            <label class="form-check-label" for="szerokość_drzwi">szerokość_drzwi:</label>
+            <input type="number" step="1" name="szerokośćDrzwi" id="szerokośćDrzwi">
+            <label class="form-check-label" for="szerokośćDrzwi">Szerokość drzwi:</label>
         </div>
         <div class="row form-check">
-            <label class="col-4" for="typDrzwi">typDrzwi:</label>
+            <label class="col-4" for="typDrzwi">Typ Drzwi:</label>
             <select class="col-8" id="typDrzwi" name="typDrzwi">
                 <c:forEach items="${requestScope.typDrzwi}" var="typDrzwi">
                     <option value="${typDrzwi}">${typDrzwi}</option>

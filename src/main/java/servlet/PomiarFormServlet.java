@@ -29,8 +29,8 @@ public class PomiarFormServlet extends HttpServlet {
                 .klient(req.getParameter("klient"))
                 .adresKlienta(req.getParameter("adresKlienta"))
                 .typDrzwi(TypDrzwi.valueOf(req.getParameter("typDrzwi")))
-                .długość_drzwi(Integer.parseInt(req.getParameter("długość_drzwi")))
-                .szerokość_drzwi(Integer.parseInt(req.getParameter("szerokość_drzwi")))
+                .długość_drzwi(Integer.parseInt(req.getParameter("długośćDrzwi")))
+                .szerokość_drzwi(Integer.parseInt(req.getParameter("szerokośćDrzwi")))
                 .build();
 
         entityDao.saveOrUpdate(pomiar);
