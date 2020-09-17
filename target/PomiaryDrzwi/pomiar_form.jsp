@@ -18,11 +18,12 @@
 <div class="container">
     <h2>Pomiar</h2>
     <form action="${pageContext.request.contextPath}/pomiar/form" method="post">
+
         <div class="input-field col s12">
             <select>
                 <option value="" disabled selected>wybierz</option>
-                <option value="monter">Monter 1</option>
-                <option value="monter">Monter 2</option>
+                <option value="monter">MONTER_1</option>
+                <option value="monter">MONTER_2</option>
                 <c:forEach items="${requestScope.monter}" var="monter">
                     <option value="${monter}">${monter}</option>
                 </c:forEach>
@@ -37,6 +38,7 @@
             <input type="text" name="adresKlientaValue" id="adresKlientaField">
             <label class="form-check-label" for="adresKlientaField">Adres Klienta:</label>
         </div>
+
         <div class="input-field col s12">
             <select>
                 <option value="" disabled selected>wybierz</option>

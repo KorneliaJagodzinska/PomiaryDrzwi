@@ -28,7 +28,7 @@
         <div class="col-2">Szerokość drzwi</div>
         <div class="col-1"></div>
     </div>
-    <c:forEach items="${requestScope.lista_pomiarów}" var="lista_pomiarów">
+    <c:forEach items="${requestScope.lista_pomiarów}" var="pomiar">
         <div class="row car-row marginless">
             <div class="col-1">${pomiar.id}</div>
             <div class="col-2">${pomiar.monter}</div>
