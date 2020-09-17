@@ -19,33 +19,33 @@
     <h2>Pomiar</h2>
     <form action="${pageContext.request.contextPath}/pomiar/form" method="post">
         <div class="row form-check">
-            <label class="col-4" for="monter">Monter:</label>
-            <select class="col-8" id="monter" name="monter">
+            <label class="col-4" for="monterField">Monter:</label>
+            <select class="col-8" id="monterField" name="monterValue">
                 <c:forEach items="${requestScope.monter}" var="monter">
                     <option value="${monter}">${monter}</option>
                 </c:forEach>
             </select>
         </div>
         <div class="row col-12 form-check">
-            <input type="text" name="klient" id="klient">
-            <label class="form-check-label" for="klient">Klient:</label>
+            <input type="text" name="klientValue" id="klientField">
+            <label class="form-check-label" for="klientField">Klient:</label>
         </div>
         <div class="row col-12 form-check">
-            <input type="text" name="adresKlienta" id="adresKlienta">
-            <label class="form-check-label" for="adresKlienta">Adres Klienta:</label>
+            <input type="text" name="adresKlientaValue" id="adresKlientaField">
+            <label class="form-check-label" for="adresKlientaField">Adres Klienta:</label>
         </div>
         <div class="row col-12 form-check">
-            <input type="number" step="1" name="długośćDrzwi" id="długośćDrzwi">
-            <label class="form-check-label" for="długośćDrzwi">Długość drzwi:</label>
+            <input type="number" step="1" name="długośćDrzwiValue" id="długośćDrzwiField">
+            <label class="form-check-label" for="długośćDrzwiField">Długość drzwi:</label>
         </div>
         <div class="row col-12 form-check">
-            <input type="number" step="1" name="szerokośćDrzwi" id="szerokośćDrzwi">
-            <label class="form-check-label" for="szerokośćDrzwi">Szerokość drzwi:</label>
+            <input type="number" step="1" name="szerokośćDrzwiValue" id="szerokośćDrzwiField">
+            <label class="form-check-label" for="szerokośćDrzwiField">Szerokość drzwi:</label>
         </div>
         <div class="row form-check">
-            <label class="col-4" for="typDrzwi">Typ Drzwi:</label>
-            <select class="col-8" id="typDrzwi" name="typDrzwi">
-                <c:forEach items="${requestScope.typDrzwi}" var="typDrzwi">
+            <label class="col-4" for="typDrzwiField">Typ Drzwi:</label>
+            <select class="col-8" id="typDrzwiField" name="typDrzwiValue">
+                <c:forEach items="${requestScope.typ_drzwi}" var="typDrzwi">
                     <option value="${typDrzwi}">${typDrzwi}</option>
                 </c:forEach>
             </select>

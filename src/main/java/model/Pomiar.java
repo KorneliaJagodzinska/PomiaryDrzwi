@@ -1,11 +1,9 @@
 package model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Data
@@ -24,4 +22,5 @@ public class Pomiar {
     private TypDrzwi typDrzwi;
     private int długość_drzwi;
     private int szerokość_drzwi;
+
 }

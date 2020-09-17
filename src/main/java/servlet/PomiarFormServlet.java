@@ -17,7 +17,8 @@ public class PomiarFormServlet extends HttpServlet {
     private final EntityDao<Pomiar> entityDao = new EntityDao<Pomiar>();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("typDrzwi", TypDrzwi.values());
+        req.setAttribute("typ_drzwi", TypDrzwi.values());
+        req.setAttribute("monter", Monter.values());
 
         req.getRequestDispatcher("/pomiar_form.jsp").forward(req, resp);
     }
@@ -25,12 +26,12 @@ public class PomiarFormServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Pomiar pomiar = Pomiar.builder()
-                .monter(Monter.valueOf(req.getParameter("monter")))
-                .klient(req.getParameter("klient"))
-                .adresKlienta(req.getParameter("adresKlienta"))
-                .typDrzwi(TypDrzwi.valueOf(req.getParameter("typDrzwi")))
-                .długość_drzwi(Integer.parseInt(req.getParameter("długośćDrzwi")))
-                .szerokość_drzwi(Integer.parseInt(req.getParameter("szerokośćDrzwi")))
+                .monter(Monter.valueOf(req.getParameter("monterField")))
+                .klient(req.getParameter("klientField"))
+                .adresKlienta(req.getParameter("adresKlientaField"))
+                .typDrzwi(TypDrzwi.valueOf(req.getParameter("typDrzwiField")))
+                .długość_drzwi(Integer.parseInt(req.getParameter("długośćDrzwiField")))
+                .szerokość_drzwi(Integer.parseInt(req.getParameter("szerokośćDrzwiField")))
                 .build();
 
         entityDao.saveOrUpdate(pomiar);

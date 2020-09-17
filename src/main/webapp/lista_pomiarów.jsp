@@ -28,7 +28,7 @@
         <div class="col-2">Szerokość drzwi</div>
         <div class="col-1"></div>
     </div>
-    <c:forEach items="${requestScope.lista_pomiarów.jsp}" var="lista_pomiarów_jsp">
+    <c:forEach items="${requestScope.lista_pomiarów}" var="lista_pomiarów">
         <div class="row car-row marginless">
             <div class="col-1">${pomiar.id}</div>
             <div class="col-2">${pomiar.monter}</div>
@@ -38,7 +38,7 @@
             <div class="col-2">${pomiar.długość}</div>
             <div class="col-2">${pomiar.szerokość}</div>
             <div class="col-1">
-                <a href="${pageContext.request.contextPath}/pomiar_form.jsp?id=${lista_pomiarów_jsp.id}">Details...</a>
+                <a href="${pageContext.request.contextPath}/pomiar?id=${pomiar.id}">Details...</a>
             </div>
         </div>
     </c:forEach>
