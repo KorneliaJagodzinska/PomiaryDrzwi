@@ -26,6 +26,14 @@
                 </c:forEach>
             </select>
         </div>
+        <div class="input-field col s12">
+            <select>
+                <option value="" disabled selected>wybierz</option>
+                <option value="monter">Monter 1</option>
+                <option value="monter">Monter 2</option>
+            </select>
+            <label>Monter</label>
+        </div>
         <div class="row col-12 form-check">
             <input type="text" name="klientValue" id="klientField">
             <label class="form-check-label" for="klientField">Klient:</label>
