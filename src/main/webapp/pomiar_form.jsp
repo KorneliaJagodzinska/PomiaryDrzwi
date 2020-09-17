@@ -6,13 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <html>
 <head>
     <title>Pomiar</title>
-    <jsp:include page="style.css"/>
+    <jsp:include page="part_style.jsp"/>
 </head>
 <body>
-<jsp:include page="navigator.jsp"/>
+<jsp:include page="part_navigator.jsp"/>
 <div class="container">
     <h2>Pomiar</h2>
     <form action="${pageContext.request.contextPath}/pomiar_form.jsp" method="post">
@@ -51,6 +53,6 @@
         <button class="form-control btn btn-danger colored-red" type="submit">Wyślij pomiar</button>
     </form>
 </div>
-
+<jsp:include page="part_footer.jsp"/>
 </body>
 </html>

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-@WebServlet("")
+@WebServlet("/pomiar/form")
 public class PomiarFormServlet extends HttpServlet {
     private final EntityDao<Pomiar> entityDao = new EntityDao<Pomiar>();
     @Override
@@ -35,7 +35,7 @@ public class PomiarFormServlet extends HttpServlet {
 
         entityDao.saveOrUpdate(pomiar);
 
-        resp.sendRedirect(req.getContextPath()+"/lista_pomiarów");
+        resp.sendRedirect(req.getContextPath()+"/pomiary");
     }
 
 }
