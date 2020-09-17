@@ -37,14 +37,6 @@
             <input type="text" name="adresKlientaValue" id="adresKlientaField">
             <label class="form-check-label" for="adresKlientaField">Adres Klienta:</label>
         </div>
-        <div class="row col-12 form-check">
-            <input type="number" step="1" name="długośćDrzwiValue" id="długośćDrzwiField">
-            <label class="form-check-label" for="długośćDrzwiField">Długość drzwi:</label>
-        </div>
-        <div class="row col-12 form-check">
-            <input type="number" step="1" name="szerokośćDrzwiValue" id="szerokośćDrzwiField">
-            <label class="form-check-label" for="szerokośćDrzwiField">Szerokość drzwi:</label>
-        </div>
         <div class="input-field col s12">
             <select>
                 <option value="" disabled selected>wybierz</option>
@@ -56,6 +48,15 @@
             </select>
             <label>Typ drzwi</label>
         </div>
+        <div class="row col-12 form-check">
+            <input type="number" step="1" name="długośćDrzwiValue" id="długośćDrzwiField">
+            <label class="form-check-label" for="długośćDrzwiField">Długość drzwi:</label>
+        </div>
+        <div class="row col-12 form-check">
+            <input type="number" step="1" name="szerokośćDrzwiValue" id="szerokośćDrzwiField">
+            <label class="form-check-label" for="szerokośćDrzwiField">Szerokość drzwi:</label>
+        </div>
+
         <button class="form-control btn btn-danger colored-red" type="submit">Wyślij pomiar</button>
     </form>
 </div>

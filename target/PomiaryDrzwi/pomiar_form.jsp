@@ -18,14 +18,6 @@
 <div class="container">
     <h2>Pomiar</h2>
     <form action="${pageContext.request.contextPath}/pomiar/form" method="post">
-<%--        <div class="row form-check">--%>
-<%--            <label class="col-4" for="monterField">Monter:</label>--%>
-<%--            <select class="col-8" id="monterField" name="monterValue">--%>
-<%--                <c:forEach items="${requestScope.monter}" var="monter">--%>
-<%--                    <option value="${monter}">${monter}</option>--%>
-<%--                </c:forEach>--%>
-<%--            </select>--%>
-<%--        </div>--%>
         <div class="input-field col s12">
             <select>
                 <option value="" disabled selected>wybierz</option>
@@ -45,6 +37,17 @@
             <input type="text" name="adresKlientaValue" id="adresKlientaField">
             <label class="form-check-label" for="adresKlientaField">Adres Klienta:</label>
         </div>
+        <div class="input-field col s12">
+            <select>
+                <option value="" disabled selected>wybierz</option>
+                <option value="typDrzwi">wejściowe</option>
+                <option value="typDrzwi">pokojowe</option>
+                <c:forEach items="${requestScope.typ_drzwi}" var="typDrzwi">
+                    <option value="${typDrzwi}">${typDrzwi}</option>
+                </c:forEach>
+            </select>
+            <label>Typ drzwi</label>
+        </div>
         <div class="row col-12 form-check">
             <input type="number" step="1" name="długośćDrzwiValue" id="długośćDrzwiField">
             <label class="form-check-label" for="długośćDrzwiField">Długość drzwi:</label>
@@ -53,14 +56,7 @@
             <input type="number" step="1" name="szerokośćDrzwiValue" id="szerokośćDrzwiField">
             <label class="form-check-label" for="szerokośćDrzwiField">Szerokość drzwi:</label>
         </div>
-        <div class="row form-check">
-            <label class="col-4" for="typDrzwiField">Typ Drzwi:</label>
-            <select class="col-8" id="typDrzwiField" name="typDrzwiValue">
-                <c:forEach items="${requestScope.typ_drzwi}" var="typDrzwi">
-                    <option value="${typDrzwi}">${typDrzwi}</option>
-                </c:forEach>
-            </select>
-        </div>
+
         <button class="form-control btn btn-danger colored-red" type="submit">Wyślij pomiar</button>
     </form>
 </div>

@@ -26,12 +26,12 @@ public class PomiarFormServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Pomiar pomiar = Pomiar.builder()
-                .monter(Monter.valueOf(req.getParameter("monterField")))
-                .klient(req.getParameter("klientField"))
-                .adresKlienta(req.getParameter("adresKlientaField"))
-                .typDrzwi(TypDrzwi.valueOf(req.getParameter("typDrzwiField")))
-                .długość_drzwi(Integer.parseInt(req.getParameter("długośćDrzwiField")))
-                .szerokość_drzwi(Integer.parseInt(req.getParameter("szerokośćDrzwiField")))
+                .monter(Monter.valueOf(req.getParameter("monterValue")))
+                .klient(req.getParameter("klientValue"))
+                .adresKlienta(req.getParameter("adresKlientaValue"))
+                .typDrzwi(TypDrzwi.valueOf(req.getParameter("typDrzwiValue")))
+                .długość_drzwi(Integer.parseInt(req.getParameter("długośćDrzwiValue")))
+                .szerokość_drzwi(Integer.parseInt(req.getParameter("szerokośćDrzwiValue")))
                 .build();
 
         entityDao.saveOrUpdate(pomiar);
